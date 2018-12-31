@@ -1,0 +1,35 @@
+<small class="text-muted">debug: {{debugInfo | json}}</small>
+ <div class="container" nostromoSimpleScroll id="home">
+  <div class="row">
+    <div class="col-xs-12">
+<!--     <h3 class="mb-4">Add entity in first child component:</h3>-->
+      <nostromo-son
+      (sonServerCreated)="onParentServerAdded($event)"
+      (sonBlueprintCreated)="onParentBlueprintAdded($event)"
+      ></nostromo-son>
+    </div>
+  </div>
+  <hr>
+<!--  <h3 class="mb-4">Display result in second child component:</h3>-->
+  <div class="row">
+      <nostromo-daughter
+      *ngFor="let parentServerElement of parentServerElements; let i = index" [element]=parentServerElement [nando]=i
+      (constructivism)="onParentMalevich($event)"></nostromo-daughter>
+  </div>
+</div>
+
+<div class="section" id="about" nostromoSimpleScroll>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur neque ducimus numquam temporibus voluptate magni tempore at nobis quaerat quidem, ullam impedit porro reprehenderit, repudiandae assumenda, libero expedita ea quod enim commodi laborum! In a, nulla aliquam amet commodi sed distinctio voluptatibus eum autem aspernatur debitis provident quos modi! Quisquam quidem nemo deserunt nesciunt commodi, ipsum optio ullam laborum atque aut. Aspernatur sed, aperiam temporibus expedita fugiat tempore doloremque. Veniam quasi, laborum aliquam quo obcaecati quas et. Autem, fugiat quod expedita enim ducimus explicabo porro. Ut iste alias, iure fuga cum minima facilis ullam corporis esse, doloribus quisquam possimus obcaecati?</p>
+</div>
+<div class="section" id="products" nostromoSimpleScroll>
+  <p>Nobis minima iure corrupti veniam cumque, mollitia totam sunt et, doloremque laborum aut quibusdam maiores eligendi sit magni assumenda illo, ut officiis pariatur, ipsum nesciunt laudantium ex voluptatum amet. Deserunt perspiciatis sed cumque tempora nesciunt culpa ea quod laboriosam, facilis distinctio, odio quaerat praesentium expedita magni hic nam saepe cum tempore impedit laborum. Voluptate optio veniam labore tenetur vel impedit, non doloribus nam magni commodi esse maxime itaque necessitatibus aspernatur totam, fugit reprehenderit voluptates asperiores voluptatem consequuntur autem aliquid unde, voluptas, iste. Dolorum saepe, est dignissimos. Suscipit molestias assumenda alias adipisci sint perferendis officia accusantium, sequi amet, quas aspernatur harum?</p>
+</div>
+<div class="section" id="testimonials" nostromoSimpleScroll>
+  <p>Incidunt, velit! Perspiciatis maiores doloribus ut, dolorum, iure quas expedita voluptatibus consequatur numquam culpa vel quae asperiores qui, delectus, odio soluta natus eaque nemo accusamus. Alias porro iste quas dolores adipisci. Ullam error, doloremque, aperiam blanditiis enim iusto laboriosam, modi quaerat omnis illo iste rerum molestiae iure itaque aspernatur facilis provident non. Distinctio et dicta veritatis eligendi, fugit nisi maxime quam obcaecati ipsa rem id nobis magnam quo repellendus iste adipisci minima facilis modi labore quos sint perferendis ipsum iure quia. Ipsum voluptas reprehenderit repudiandae labore, quis illo doloribus quam ut magnam reiciendis sapiente eaque incidunt quod possimus odio aut!</p>
+</div>
+<div class="section" id="projects" nostromoSimpleScroll>
+  <p>Repudiandae mollitia dolorem minima autem similique amet voluptatibus ea, rerum ipsam, exercitationem velit eos! Magni omnis, inventore modi ex velit quasi earum praesentium est magnam. Repellat distinctio cupiditate iure. Quidem sit magni sint laborum possimus quod unde distinctio provident non esse, inventore suscipit et incidunt neque quasi quae commodi enim vitae est beatae, totam aliquam tempora! Delectus odit, quae aliquam adipisci molestiae explicabo, quod vero doloribus iste, omnis perspiciatis maxime voluptate magni repellendus facere. Omnis beatae laboriosam ex nobis iusto facere sint quia cumque illo sed maxime perspiciatis iure aliquam, eligendi quae, accusantium delectus. Iusto aliquam, explicabo fugiat fugit necessitatibus.</p>
+</div>
+<div class="section" id="contact" nostromoSimpleScroll>
+  <p>Officiis accusantium nostrum sunt harum. Saepe optio error, est, dicta magni accusantium, omnis, atque unde ea ad asperiores assumenda labore fugiat similique recusandae dolore possimus beatae. Hic modi, labore quam quaerat laboriosam sequi earum consequatur neque debitis et quibusdam nobis porro atque possimus, cupiditate vitae sed sit obcaecati ab deserunt excepturi. Eligendi a sed odit deserunt corrupti nesciunt odio, provident rem. Facere quam nihil velit quaerat hic molestias! Quia animi aperiam qui? Ipsum porro, neque beatae itaque aperiam repellat eaque. Porro cum consectetur, numquam sit ratione natus dolore iure, aperiam ipsa omnis possimus voluptatibus corporis pariatur iusto debitis aliquam! Deserunt.</p>
+</div>

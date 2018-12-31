@@ -1,0 +1,14 @@
+@import "../../../../styles/_bootstrap/bootstrap";
+
+.container {
+//  overflow-y: scroll;
+//  height: 800px;
+}
+//element has to be scrollable
+//in order to use
+//@HostListener('scroll', ['$event'])
+//  onElementScroll(event: any) {
+//    console.log('bollocks!!!');
+//  }
+
+.section {margin-bottom: 10em;}

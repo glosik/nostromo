@@ -1,0 +1,30 @@
+<!--
+<div class="card mr-3 mb-4"
+ [ngClass]="{'border-secondary': element.type === 'server', 'border-info': element.type === 'blueprint'}">
+-->
+<!-- purges classes card,mr-3,mb-4
+ <div class="card mr-3 mb-4"
+ [className]="element.type === 'server' ? 'border-secondary' : 'border-info'">
+-->
+<div class="card mr-3 mb-4 spy-{{nando}}"
+         [class.border-secondary]="element.type === 'server'"
+         [class.border-info]="element.type === 'blueprint'"
+         nostromoHovercraft>
+    <div class="card-header">
+     <button type="button" class="close" aria-label="Close" (click)="invokeEmitter(nando)">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="card-body">
+
+      <h5 class="card-title">{{ element.name }}</h5>
+      <p class="card-text">
+          <strong class="text-success"
+           *ngIf="element.type === 'server'">{{ element.content }}</strong>
+          <strong class="text-warning"
+          *ngIf="element.type === 'blueprint'">{{ element.content }}</strong>
+      </p>
+      <button (click)="invokeEmitter(nando, $event)" type="button" class="btn btn-info btn-sm float-right">Delete</button>
+    </div>
+</div>
