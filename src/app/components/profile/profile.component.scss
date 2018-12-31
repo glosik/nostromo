@@ -1,0 +1,13 @@
+label { margin: 1em; }
+
+@supports (display:grid) {
+  form {
+      display: grid;
+  }
+}
+
+@supports not (display:grid) {
+    form { display: flex; flex-direction: column;}
+}
+
+
