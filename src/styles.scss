@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: lighten(lightsteelblue, 15%);
+}
+
+article {margin-bottom: 10em;}
+
+.list-unstyled {list-style: none;}
