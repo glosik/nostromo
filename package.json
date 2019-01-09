@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prebuild": "npm run version-build",
     "build": "ng build",
     "build-dev": "ng build",
     "build-public": "ng build --prod",
