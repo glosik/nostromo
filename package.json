@@ -19,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run version-build --git-tag-version=false && git add src/environments/version.ts && git commit -m \"version bumped to %npm_package_version%\" "
+      "pre-push": "npm run version-build --git-tag-version=false && git add src/environments/version.ts && git commit -m \"version bumped to echo $npm_package_version\" "
     }
   },
   "private": true,
