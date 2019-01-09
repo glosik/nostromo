@@ -19,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run version-build && git add . && git commit -m \"version bumped to echo $npm_package_version\" "
+      "pre-push": "npm run version-build && git add . && git commit --amend -m \"$npm_package_version\" "
     }
   },
   "private": true,
