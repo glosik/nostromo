@@ -5,9 +5,20 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-dev": "ng build",
+    "build-public": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy-stage": "npm run build && cd deployment && npm run deploy",
+    "deploy-dev": "npm run build && cd deployment && npm run go-live",
+    "version-build": "npm version patch && node ./version.build.js",
+    "bump": "npm version patch && node ./replace.build.js"
+  },
+  "husky": {
+    "hooks": {
+      "post-commit": "npm run version-build"
+    }
   },
   "private": true,
   "dependencies": {
@@ -37,6 +48,7 @@
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",
+    "husky": "^1.2.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
