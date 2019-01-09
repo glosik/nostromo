@@ -1,8 +1,9 @@
 {
   "name": "nostromo",
-  "version": "0.0.28",
+  "version": "0.0.33",
   "scripts": {
     "ng": "ng",
+    "cat": "echo $npm_package_version",
     "start": "ng serve",
     "prebuild": "npm run version-build",
     "build": "ng build",
@@ -14,11 +15,11 @@
     "pre-deploy": "npm version patch && git add . ",
     "deploy-stage": "npm run build && cd deployment && npm run deploy",
     "deploy-dev": "npm run build && cd deployment && npm run go-live",
-    "version-build": "npm version patch && node ./version.build.js"
+    "version-build": "npm version patch --git-tag-version=false && node ./version.build.js"
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run version-build && git add src/environments/version.ts && git commit -m 'version bumped'"
+      "pre-push": "npm run version-build && git add src/environments/version.ts && git commit -m \"version bumped to $npm_package_version\" "
     }
   },
   "private": true,
