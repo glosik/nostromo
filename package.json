@@ -9,7 +9,7 @@
     "build": "ng build",
     "build-dev": "ng build",
     "build-public": "ng build --prod",
-    "tag": "git push",
+    "tag": "git tag 0.0.39",
     "bump": "npm run version-build && git add . && git commit --amend -m \" commit empty $npm_package_version\"",
     "test": "ng test",
     "lint": "ng lint",
@@ -17,7 +17,8 @@
     "pre-deploy": "npm version patch && git add . ",
     "deploy-stage": "npm run build && cd deployment && npm run deploy",
     "deploy-dev": "npm run build && cd deployment && npm run go-live",
-    "version-build": "npm version patch --git-tag-version=false && node ./version.build.js"
+    "version-build": "npm version patch --git-tag-version=false && node ./version.build.js",
+    "ver": "npm version patch && node ./version.build.js"
   },
   "private": true,
   "dependencies": {
