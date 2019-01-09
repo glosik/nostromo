@@ -1,4 +1,4 @@
 export const VERSION = {
-  appVersion: '1.0.27',
-  buildDate: '1-8-2019 17:11:56'
+  appVersion: '0.0.28',
+  buildDate: '1-9-2019 13:43:28'
 };

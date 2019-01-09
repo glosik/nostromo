@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
+import { environment } from '../../../environments/environment.prod';
 
 @Component({
   selector: 'nostromo-reactive-programming',
@@ -8,9 +9,11 @@ import { interval, Subscription } from 'rxjs';
 })
 export class ReactiveProgrammingComponent implements OnInit {
   sub: Subscription;
+  version;
   constructor() { }
 
   ngOnInit() {
+    this.version = environment.appVersion;
     const myNumbers$ = interval(1000);
 
   //1.shorter notation
