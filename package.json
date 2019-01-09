@@ -18,7 +18,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run version-build"
+      "pre-push": "npm run version-build && git add src/environments/versions.ts && git commit -m 'patch released - version updated'"
     }
   },
   "private": true,
