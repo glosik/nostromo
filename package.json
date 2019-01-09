@@ -1,6 +1,6 @@
 {
   "name": "nostromo",
-  "version": "0.0.90",
+  "version": "0.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -17,7 +17,7 @@
   },
   "husky": {
     "hooks": {
-      "post-commit": "npm run version-build"
+      "post-commit": "npm version patch"
     }
   },
   "private": true,
