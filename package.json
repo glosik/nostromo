@@ -1,6 +1,6 @@
 {
   "name": "nostromo",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "scripts": {
     "ng": "ng",
     "cat": "echo $npm_package_version",
@@ -19,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run version-build && git add . && git commit --amend -m \"$npm_package_version\" "
+      "pre-push": "npm run version-build && git add . && git commit --amend -m \" commit empty $npm_package_version\" "
     }
   },
   "private": true,
