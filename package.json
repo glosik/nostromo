@@ -1,6 +1,6 @@
 {
   "name": "nostromo",
-  "version": "0.0.38",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
