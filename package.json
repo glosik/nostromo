@@ -1,6 +1,6 @@
 {
   "name": "nostromo",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "scripts": {
     "ng": "ng",
     "cat": "echo $npm_package_version",
