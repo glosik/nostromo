@@ -1,6 +1,6 @@
 {
   "name": "nostromo",
-  "version": "0.0.33",
+  "version": "0.0.39",
   "scripts": {
     "ng": "ng",
     "cat": "echo $npm_package_version",
@@ -9,18 +9,17 @@
     "build": "ng build",
     "build-dev": "ng build",
     "build-public": "ng build --prod",
+    "changelog": "git-to-changelog",
+    "tag": "git tag v0.0.39",
+    "bump": "npm run version-build && git add . && git commit --amend -m \" commit empty $npm_package_version\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pre-deploy": "npm version patch && git add . ",
     "deploy-stage": "npm run build && cd deployment && npm run deploy",
     "deploy-dev": "npm run build && cd deployment && npm run go-live",
-    "version-build": "npm version patch --git-tag-version=false && node ./version.build.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run version-build && git add src/environments/version.ts && git commit -m \"version bumped to $npm_package_version\" "
-    }
+    "version-build": "npm version patch --git-tag-version=false && node ./version.build.js",
+    "ver": "npm version patch && node ./version.build.js"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +46,7 @@
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "conventional-changelog-cli": "^2.0.11",
+    "git-to-changelog": "^1.3.0",
     "husky": "^1.2.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
