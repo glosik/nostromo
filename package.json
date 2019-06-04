@@ -12,6 +12,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pre-deploy": "npm version patch && git add . ",
+    "ngh": "ng build --prod --base-href 'https://glosik.github.io/nostromo/'",
     "deploy-stage": "npm run build && cd deployment && npm run deploy",
     "deploy-dev": "npm run build && cd deployment && npm run go-live",
     "version-build": "npm version patch && node ./version.build.js",
