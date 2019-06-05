@@ -26,7 +26,7 @@ export class DaughterComponent implements OnInit {
   ngOnInit() {
   }
 
-  invokeEmitter(data, event) {
+  invokeEmitter(data) {
     // Invoking the EventEmitter instance
     this.constructivism.emit(data);
       console.log('303 !!!  invokeEmitter:', data, event);
